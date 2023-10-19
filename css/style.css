@@ -11,12 +11,12 @@
     font-family: 'Poppins' sans-serif;
 }
 :root{
-    --bg-color:#fff;
-    --second-bg-color:rgb(143, 159, 160);
-    --main-color:#0ef;
-    --text-color:#f70000;
+    --bg-color:#03051f;
+    --second-bg-color:rgb(39, 1, 1);
+    --main-color:rgb(246, 182, 182);
+    --text-color:#ff0000;
     --h1-color:gray;
-    --h2-color:#fff;
+    --h2-color:#d4c8c8;
     --shipping-color:#ff9203;
 }
 html{
@@ -41,6 +41,10 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    border-bottom: solid var(--h1-color);
+    border-left:  solid var(--text-color);
+    border-top: solid var(--text-color);
+    border-right: solid var(--h1-color);
 }
 .logo {
     font-size: 2.5rem;
@@ -71,10 +75,12 @@ body{
     justify-content: center;
     align-items: center;
 }
-.home-img img{
-    width: 30rem;
-    margin: 5rem;
-    animation: floatimage 3s ease-in-out infinite;
+.home-content{
+    text-align: center;
+}
+ .home-content .home-img {
+    width: 100vw;
+
 }
 @keyframes floatimage {
     0%{
@@ -105,7 +111,7 @@ span{
     color: var(--text-color);
 }
 .home-content h2{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 1.2;
     color: var(--h1-color);
@@ -119,12 +125,12 @@ span{
 .btn{
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: var(--main-color);
+    background: var(--text-color);
     border-radius: 3rem;
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 1rem var(--text-color);
     font-size: 1.7rem;
     font-weight: 600;
-    color: var(--bg-color);
+    color: var(--h2-color);
     letter-spacing: .1rem;
     margin: 2rem;
     transition: .5s ease;
@@ -157,11 +163,11 @@ span{
 .about-content h3{
     text-align: left;
     line-height: 1.2;
-    color: var(--h2-color);
+    color: var(--h1-color);
 }
 .about-content h1{
     font-size: 2.5rem;
-    color: var(--h2-color);
+    color: var(--main-color);
 }
 .about-content p{
     font-size: 1.5rem;
@@ -169,7 +175,7 @@ span{
 }
 .product h2{
     margin-bottom: 5rem;
-    color: var(--second-bg-color);
+    color: var(--h1-color);
 }
 .product-container{
     display: flex;
@@ -178,6 +184,9 @@ span{
     flex-wrap: wrap;
     gap: 2rem;
     animation: floatimage 3s ease-in-out infinite;
+}
+.product-box{
+    color: var(--h2-color);
 }
 .product-container .product-box{
     flex: 1 1 30rem;
@@ -197,13 +206,14 @@ span{
     height: 15rem;
 }
 .product-box h3{
-    color: var(--h2-color);
+    color: var(--main-color);
+    font-size: 2rem;
 }
 .service{
     background: var(--second-bg-color);
 }
 .service h2{
-    color: var(--bg-color);
+    color: var(--h1-color);
 }
 .service-container{
     display: grid;
@@ -230,7 +240,7 @@ span{
     font-size: 1.5rem;
     color: var(--h2-color);
     margin: 1rem 0 3rem;
-    color: var(--second-bg-color);
+    color: var(--h1-color);
 }
 .cta{
     background: #feeee7;
@@ -242,7 +252,7 @@ span{
 }
 .cta h2{
     font-size: 2rem;
-    color: var(--bg-color);
+    color: var(--h1-color);
     margin-bottom: 2rem;
 }
 .main{
@@ -318,7 +328,7 @@ span{
     text-align: center;
     font-size: 4rem;
     margin-bottom: 5rem;
-    color: var(--second-bg-color);
+    color: var(--h1-color);
 }
 .footer{
     display: flex;
@@ -326,11 +336,11 @@ span{
     align-items: center;
     padding: 2rem 0%;
     flex-wrap: wrap;
-    background: var(--second-bg-color);
+    background: var(--text-color);
 }
 .footer-text{
     font-size: 1.6rem;
-    color: var(--bg-color);
+    color: var(--h2-color);
 }
 .footer-icon-top a{
     display: inline-flex;
@@ -346,7 +356,7 @@ span{
 }
 .footer-icon-top a i{
     font-size: 2.4rem;
-    color: var(--bg-color);
+    color: var(--h2-color);
 }
 /* BREADPOINT */
 @media (max-width: 1200px) {
@@ -403,11 +413,13 @@ span{
         font-size: 2.0rem;
     }
     .home-conten h1{
+        margin-top: 4rem;
         font-size: 5rem;
     }
-    .home-img img{
-        width: 40vw;
-        margin-top: 4rem;
+    .home-img video{
+        width: 100vw;
+        height: 100vh;
+        margin-top: 0px;
     }
     .about{
         flex-direction: column-reverse;
